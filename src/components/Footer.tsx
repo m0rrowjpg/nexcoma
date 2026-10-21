@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Send, CheckCircle2, ArrowUpRight } from 'lucide-react';
-import type { CategoryMeta, ToolCategory } from '../types';
+import React, { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import type { CategoryMeta, ToolCategory } from "../types";
 
 interface FooterProps {
   categories: CategoryMeta[];
@@ -13,14 +13,14 @@ export const Footer: React.FC<FooterProps> = ({
   onSelectCategory,
   onOpenSubmitModal,
 }) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim() && email.includes('@')) {
+    if (email.trim() && email.includes("@")) {
       setSubscribed(true);
-      setEmail('');
+      setEmail("");
     }
   };
 
@@ -39,12 +39,13 @@ export const Footer: React.FC<FooterProps> = ({
               </span>
             </div>
             <p className="text-xs leading-relaxed max-w-sm text-neutral-500 dark:text-neutral-400">
-              Discover smarter ways to work. An independent, curated directory and technical benchmark
-              of frontier AI tools, automations, and productivity utilities.
+              Discover smarter ways to work. An independent, curated directory
+              and technical benchmark of frontier AI tools, automations, and
+              productivity utilities.
             </p>
 
             {/* Newsletter input */}
-            <div className="pt-2">
+            {/* <div className="pt-2">
               <p className="font-semibold text-neutral-900 dark:text-white text-xs mb-2">
                 Weekly Intelligence Digest
               </p>
@@ -72,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({
                   </button>
                 </form>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Directory Categories */}
@@ -82,14 +83,14 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2">
               {categories.map((category) => (
-                  <li key={category.id}>
-                    <button
-                      onClick={() => onSelectCategory(category.id)}
-                      className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                    >
-                      {category.name}
-                    </button>
-                  </li>
+                <li key={category.id}>
+                  <button
+                    onClick={() => onSelectCategory(category.id)}
+                    className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  >
+                    {category.name}
+                  </button>
+                </li>
               ))}
             </ul>
           </div>
@@ -109,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({
                   <ArrowUpRight className="h-3 w-3" />
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#methodology"
                   className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -127,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({
                   <span>Open Data on GitHub</span>
                   <ArrowUpRight className="h-3 w-3" />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -137,7 +138,8 @@ export const Footer: React.FC<FooterProps> = ({
               Editorial Policy
             </h4>
             <p className="text-[11px] leading-relaxed text-neutral-500 dark:text-neutral-400 mb-2">
-              Nexcoma does not accept payment, affiliate kickbacks, or gifts for ranking adjustments.
+              Nexcoma does not accept payment, affiliate kickbacks, or gifts for
+              ranking adjustments.
             </p>
             <p className="text-[11px] text-neutral-400 dark:text-neutral-500">
               Last updated: October 2026
@@ -146,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom copyright & attribution */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between border-t border-neutral-100 pt-6 text-[11px] text-neutral-400 dark:border-neutral-800/60 dark:text-neutral-500">
+        {/* <div className="mt-12 flex flex-col sm:flex-row items-center justify-between border-t border-neutral-100 pt-6 text-[11px] text-neutral-400 dark:border-neutral-800/60 dark:text-neutral-500">
           <div>
             © {new Date().getFullYear()} Nexcoma Inc. All rights reserved.
           </div>
@@ -161,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({
               Status
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
