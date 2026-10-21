@@ -9,7 +9,7 @@ import {
   Layers,
   SlidersHorizontal,
 } from 'lucide-react';
-import { CategoryMeta, ToolCategory, PricingModel, SortOption } from '../types';
+import type { CategoryMeta, ToolCategory, PricingModel, SortOption } from '../types';
 
 interface CategoryBarProps {
   categories: CategoryMeta[];

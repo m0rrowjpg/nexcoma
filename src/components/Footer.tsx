@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, ArrowUpRight } from 'lucide-react';
-import { CategoryMeta, ToolCategory } from '../types';
+import type { CategoryMeta, ToolCategory } from '../types';
 
 interface FooterProps {
   categories: CategoryMeta[];

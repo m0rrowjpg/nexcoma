@@ -9,7 +9,7 @@ import {
   Sparkles,
   ArrowRight,
 } from 'lucide-react';
-import { AITool } from '../types';
+import type { AITool } from '../types';
 import { generateComparisonMatrix } from '../utils/filterEngine';
 
 interface CompareViewProps {

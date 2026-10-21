@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { TOOLS_DATA } from '../data/toolsData';
-import { AITool } from '../types';
+import type { AITool } from '../types';
 
 interface SavedToolsContextType {
   savedIds: string[];

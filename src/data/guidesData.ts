@@ -1,4 +1,4 @@
-import { GuideArticle } from '../types';
+import type { GuideArticle } from '../types';
 
 export const GUIDES_DATA: GuideArticle[] = [
   {

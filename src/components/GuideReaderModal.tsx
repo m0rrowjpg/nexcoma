@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Clock, Calendar, User, ArrowLeft, Share2, Check } from 'lucide-react';
-import { GuideArticle } from '../types';
+import type { GuideArticle } from '../types';
 
 interface GuideReaderModalProps {
   guide: GuideArticle | null;

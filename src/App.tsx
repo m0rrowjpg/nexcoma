@@ -17,7 +17,7 @@ import { Footer } from './components/Footer';
 import { TOOLS_DATA, CATEGORIES_DATA } from './data/toolsData';
 import { GUIDES_DATA } from './data/guidesData';
 import { filterTools, calculateCategoryCounts } from './utils/filterEngine';
-import { AITool, ToolCategory, PricingModel, SortOption, GuideArticle } from './types';
+import type { AITool, ToolCategory, PricingModel, SortOption, GuideArticle } from './types';
 import { getPublishedContent, type PublishedContent } from './lib/content';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
 import {

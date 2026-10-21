@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, ArrowRight, Clock } from 'lucide-react';
-import { GuideArticle } from '../types';
+import type { GuideArticle } from '../types';
 
 interface GuidesSectionProps {
   guides: GuideArticle[];

@@ -1,4 +1,4 @@
-import { AITool, CategoryMeta } from '../types';
+import type { AITool, CategoryMeta } from '../types';
 
 export const CATEGORIES_DATA: CategoryMeta[] = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Bookmark, BookmarkCheck, ArrowUpRight, Scale, Check } from 'lucide-react';
-import { AITool } from '../types';
+import type { AITool } from '../types';
 import { useSavedTools } from '../context/SavedToolsContext';
 
 interface ToolCardProps {

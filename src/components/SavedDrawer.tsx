@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, Bookmark, ExternalLink, Trash2, ArrowUpRight } from 'lucide-react';
 import { useSavedTools } from '../context/SavedToolsContext';
-import { AITool } from '../types';
+import type { AITool } from '../types';
 
 interface SavedDrawerProps {
   isOpen: boolean;

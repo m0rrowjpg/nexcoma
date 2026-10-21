@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle2, AlertCircle, LoaderCircle } from 'lucide-react';
-import { CategoryMeta, ToolCategory, PricingModel } from '../types';
+import type { CategoryMeta, ToolCategory, PricingModel } from '../types';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
 
 interface SubmitToolModalProps {
