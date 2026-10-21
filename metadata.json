@@ -1,0 +1,6 @@
+{
+  "name": "Nexcoma",
+  "description": "Discover smarter ways to work. Modern directory and curation of AI tools, online utilities, automation platforms, and productivity software.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
