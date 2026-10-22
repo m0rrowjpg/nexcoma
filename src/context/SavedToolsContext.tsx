@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { TOOLS_DATA } from '../data/toolsData';
-import type { AITool } from '../types';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { TOOLS_DATA } from "../data/toolsData";
+import type { AITool } from "../types";
 
 interface SavedToolsContextType {
   savedIds: string[];
@@ -10,29 +10,35 @@ interface SavedToolsContextType {
   clearSaved: () => void;
 }
 
-const SavedToolsContext = createContext<SavedToolsContextType | undefined>(undefined);
+const SavedToolsContext = createContext<SavedToolsContextType | undefined>(
+  undefined,
+);
 
-export const SavedToolsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const SavedToolsProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [savedIds, setSavedIds] = useState<string[]>(() => {
     try {
-      const stored = localStorage.getItem('nexcoma_saved_tools');
-      return stored ? JSON.parse(stored) : ['cursor', 'n8n'];
+      const stored = localStorage.getItem("nexcoma_saved_tools");
+      return stored ? JSON.parse(stored) : [];
     } catch {
-      return ['cursor', 'n8n'];
+      return [];
     }
   });
 
   useEffect(() => {
     try {
-      localStorage.setItem('nexcoma_saved_tools', JSON.stringify(savedIds));
+      localStorage.setItem("nexcoma_saved_tools", JSON.stringify(savedIds));
     } catch (e) {
-      console.error('Failed to persist saved tools', e);
+      console.error("Failed to persist saved tools", e);
     }
   }, [savedIds]);
 
   const toggleSave = (toolId: string) => {
     setSavedIds((prev) =>
-      prev.includes(toolId) ? prev.filter((id) => id !== toolId) : [...prev, toolId]
+      prev.includes(toolId)
+        ? prev.filter((id) => id !== toolId)
+        : [...prev, toolId],
     );
   };
 
@@ -54,7 +60,7 @@ export const SavedToolsProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 export function useSavedTools() {
   const context = useContext(SavedToolsContext);
   if (!context) {
-    throw new Error('useSavedTools must be used within a SavedToolsProvider');
+    throw new Error("useSavedTools must be used within a SavedToolsProvider");
   }
   return context;
 }
